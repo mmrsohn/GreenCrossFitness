@@ -53,16 +53,27 @@ public class LoginActivity extends AppCompatActivity {
         fragment.setArguments(args);
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
 
-        transaction.add(fragment, fragment.getClass().getSimpleName());
-        transaction.replace(R.id.content_layout, fragment);
+        transaction.replace(R.id.content_layout, fragment, fragment.getClass().getSimpleName());
+        transaction.addToBackStack(null);
+
         transaction.commit();
+        printFragmentLog();
+    }
 
-        if (getSupportFragmentManager().getFragments() != null)
-            Logger.i(TAG, ""+ getSupportFragmentManager().getFragments().size());
+    private void printFragmentLog() {
+        if (getSupportFragmentManager().getFragments() != null) {
+            Logger.i(TAG, "replaceFragment.size=" + getSupportFragmentManager().getFragments().size());
 
-//        for (Fragment fg: getSupportFragmentManager().getFragments()) {
-//            Logger.i(TAG, fg.getFragmentManager().toString());
-//        }
+            for (Fragment fg: getSupportFragmentManager().getFragments()) {
+                if (fg != null)
+                    Logger.i(TAG, "replaceFragment.name="+fg.toString());
+            }
+        }
+    }
 
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        printFragmentLog();
     }
 }

@@ -9,12 +9,14 @@
         android:id="@+id/login_id_edittext"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:hint="@string/login_id_hint"
         android:inputType="textEmailAddress"/>
 
     <EditText
         android:id="@+id/login_pwd_edittext"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:hint="@string/login_password_hint"
         android:inputType="textPassword"/>
 
     <LinearLayout

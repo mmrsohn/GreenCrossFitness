@@ -3,6 +3,7 @@ package com.greencross.fitness;
 import android.content.Context;
 import android.util.AttributeSet;
 import android.view.View;
+import android.widget.RelativeLayout;
 
 /**
  * Created by MrsWin on 2017-02-16.
@@ -30,5 +31,6 @@ public class CommonActionBar extends View {
 
     private void init(Context context) {
         inflate(context, R.layout.common_action_bar, null);
+        setLayoutParams(new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT, RelativeLayout.LayoutParams.WRAP_CONTENT));
     }
 }
