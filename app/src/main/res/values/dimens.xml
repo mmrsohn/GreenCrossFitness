@@ -1,0 +1,58 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <!-- xxhdpi 기준 -->
+    <dimen name="dp_1">0.33dp</dimen>
+    <dimen name="dp_2">0.66dp</dimen>
+    <dimen name="dp_3">0.99dp</dimen>
+    <dimen name="dp_4">1.32dp</dimen>
+    <dimen name="dp_5">1.65dp</dimen>
+    <dimen name="dp_6">1.98dp</dimen>
+    <dimen name="dp_7">2.31dp</dimen>
+    <dimen name="dp_8">2.64dp</dimen>
+    <dimen name="dp_9">2.97dp</dimen>
+    <dimen name="dp_10">3.3dp</dimen>
+    <dimen name="dp_11">3.63dp</dimen>
+    <dimen name="dp_12">3.96dp</dimen>
+    <dimen name="dp_13">4.29dp</dimen>
+    <dimen name="dp_14">4.62dp</dimen>
+    <dimen name="dp_15">4.95dp</dimen>
+    <dimen name="dp_16">5.28dp</dimen>
+    <dimen name="dp_17">5.61dp</dimen>
+    <dimen name="dp_18">5.94dp</dimen>
+    <dimen name="dp_19">6.27dp</dimen>
+    <dimen name="dp_20">6.6dp</dimen>
+    <dimen name="dp_21">6.93dp</dimen>
+    <dimen name="dp_22">7.26dp</dimen>
+    <dimen name="dp_23">7.59dp</dimen>
+    <dimen name="dp_24">7.92dp</dimen>
+    <dimen name="dp_25">8.25dp</dimen>
+    <dimen name="dp_26">8.58dp</dimen>
+    <dimen name="dp_27">8.91dp</dimen>
+    <dimen name="dp_28">9.24dp</dimen>
+    <dimen name="dp_29">9.57dp</dimen>
+    <dimen name="dp_30">9.9dp</dimen>
+    <dimen name="dp_31">10.23dp</dimen>
+    <dimen name="dp_32">10.56dp</dimen>
+    <dimen name="dp_33">10.89dp</dimen>
+    <dimen name="dp_34">11.22dp</dimen>
+    <dimen name="dp_35">11.55dp</dimen>
+    <dimen name="dp_36">11.88dp</dimen>
+    <dimen name="dp_37">12.21dp</dimen>
+    <dimen name="dp_38">12.54dp</dimen>
+    <dimen name="dp_39">12.87dp</dimen>
+    <dimen name="dp_40">13.2dp</dimen>
+    <dimen name="dp_41">13.53dp</dimen>
+    <dimen name="dp_42">13.86dp</dimen>
+    <dimen name="dp_43">14.19dp</dimen>
+    <dimen name="dp_44">14.52dp</dimen>
+    <dimen name="dp_45">14.85dp</dimen>
+    <dimen name="dp_46">15.18dp</dimen>
+    <dimen name="dp_47">15.51dp</dimen>
+    <dimen name="dp_48">15.84dp</dimen>
+    <dimen name="dp_49">16.17dp</dimen>
+    <dimen name="dp_50">16.5dp</dimen>
+
+</resources>

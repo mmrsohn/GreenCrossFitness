@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">GreenCrossFitness</string>
+
+    <string name="text_next">다음</string>
+    <string name="text_phone_num">전화번호</string>
+
+    <string name="login_auto_login_setting">자동로그인설정</string>
+    <string name="login_save_id">아이디저장</string>
+    <string name="login_en">Login</string>
+    <string name="login_member_join">회원가입</string>
+    <string name="login_foget_account">아이디 or 비밀번호가 기억나지 않으세요?</string>
+
+
+    <string name="join_step1_title">가입 정보 입력(1/3)</string>
+    <string name="join_step1_id_hint">ID (이메일 주소 입력)</string>
+    <string name="join_step1_id_error">올바른 이메일 주소를 입력하세요.</string>
+    <string name="join_step1_pwd_hint1">암호 입력</string>
+    <string name="join_step1_pwd_hint2">암호 확인</string>
+    <string name="join_step1_pwd_error">암호가 일치하지 않습니다.</string>
+    <string name="join_step1_pwd_len">최소6자</string>
+    <string name="join_step1_name_hint2">사용자 이름 입력 (최소3자,최대10자)</string>
+    <string name="join_step1_name_error">중복된 이름입니다.</string>
+    <string name="join_step1_phone_num_error">중복된 전화번호 입니다.</string>
+    <string name="join_step1_dont_special_word">특수문자는 사용하실 수 없습니다.</string>
+
+    <string name="join_step1_agree">동의합니다.</string>
+    <string name="join_step1_contract1">이용약관</string>
+    <string name="join_step1_contract2">개인정보취급방침</string>
+    <string name="join_step1_contract_error">약관에 동의하셔야 합니다.</string>
+
+
+
+
+</resources>
