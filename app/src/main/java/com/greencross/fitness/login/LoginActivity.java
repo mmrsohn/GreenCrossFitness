@@ -9,6 +9,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
 
 import com.greencross.fitness.R;
 import com.greencross.fitness.util.Logger;
@@ -38,6 +40,11 @@ public class LoginActivity extends AppCompatActivity {
         LayoutInflater inflater = (LayoutInflater)getSystemService(LAYOUT_INFLATER_SERVICE);
         View actionbar = inflater.inflate(R.layout.common_action_bar, null);
 
+        Button actionbarrightbutton = (Button) actionbar.findViewById(R.id.action_bar_right_button);
+        TextView actionbartitletextview = (TextView) actionbar.findViewById(R.id.action_bar_title_textview);
+
+        actionbar.findViewById(R.id.action_bar_left_button).setOnClickListener(actionBarClickListener);
+
         actionBar.setCustomView(actionbar);
 
         //액션바 양쪽 공백 없애기
@@ -46,6 +53,17 @@ public class LoginActivity extends AppCompatActivity {
 
         return true;
     }
+
+    View.OnClickListener actionBarClickListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            int vId = v.getId();
+            if (R.id.action_bar_left_button == vId) {
+                onBackPressed();
+            }
+
+        }
+    };
 
     private void init() {
         Fragment loginFragment = LoginFragment.newInstance(new IContent() {
