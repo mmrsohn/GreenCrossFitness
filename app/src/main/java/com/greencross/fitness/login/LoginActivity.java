@@ -38,7 +38,7 @@ public class LoginActivity extends AppCompatActivity {
 
         //layout을 가지고 와서 actionbar에 포팅을 시킵니다.
         LayoutInflater inflater = (LayoutInflater)getSystemService(LAYOUT_INFLATER_SERVICE);
-        View actionbar = inflater.inflate(R.layout.common_action_bar, null);
+        View actionbar = inflater.inflate(R.layout.custom_action_bar, null);
 
         Button actionbarrightbutton = (Button) actionbar.findViewById(R.id.action_bar_right_button);
         TextView actionbartitletextview = (TextView) actionbar.findViewById(R.id.action_bar_title_textview);
@@ -93,6 +93,7 @@ public class LoginActivity extends AppCompatActivity {
 ////                .beginTransaction()
 ////                .replace(R.id.content_layout, fragment).commit();
 //    }
+
 
     private void replaceFragment(Fragment fragment) {
         Bundle args = new Bundle();

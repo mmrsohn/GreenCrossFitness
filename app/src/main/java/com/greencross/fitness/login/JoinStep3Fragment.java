@@ -13,39 +13,38 @@ import com.greencross.fitness.R;
  * Created by MrsWin on 2017-02-16.
  */
 
-public class JoinStep1Fragment extends Fragment {
+public class JoinStep3Fragment extends Fragment {
 
     private static LoginActivity.IContent mIContent;
 
 
     public static Fragment newInstance(LoginActivity.IContent iContent) {
 //    public static Fragment newInstance() {
-        JoinStep1Fragment fragment = new JoinStep1Fragment();
+        JoinStep3Fragment fragment = new JoinStep3Fragment();
         mIContent = iContent;
         return fragment;
     }
 
-
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.join_step1_fragment, container, false);
+        View view = inflater.inflate(R.layout.join_step3_fragment, container, false);
         initView(view);
         return view;
     }
 
     private void initView(View view) {
 
-        view.findViewById(R.id.next_button).setOnClickListener(mOnClickListener);
+        view.findViewById(R.id.complete_btn).setOnClickListener(mOnClickListener);
     }
 
     View.OnClickListener mOnClickListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
             int vId = v.getId();
-            if (R.id.next_button == vId) {
+            if (R.id.complete_btn == vId) {
                 if (mIContent != null)
-                    mIContent.setFragment(JoinStep2Fragment.newInstance(mIContent));
+                    mIContent.setFragment(LoginFragment.newInstance(mIContent));
             }
         }
     };

@@ -30,7 +30,7 @@ public class CommonActionBar extends View {
 //    }
 
     private void init(Context context) {
-        inflate(context, R.layout.common_action_bar, null);
+        inflate(context, R.layout.custom_action_bar, null);
         setLayoutParams(new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT, RelativeLayout.LayoutParams.WRAP_CONTENT));
     }
 }

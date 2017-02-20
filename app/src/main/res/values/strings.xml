@@ -1,19 +1,41 @@
 <resources>
     <string name="app_name">GreenCrossFitness</string>
 
+    <string name="green_cross_health_care">녹십자 헬스케어</string>
     <string name="text_next">다음</string>
-    <string name="text_phone_num">전화번호</string>
+    <string name="text_yes">네</string>
+    <string name="text_no">아니요</string>
+    <string name="text_dont_have">없음</string>
 
-    <string name="login_auto_login_setting">자동로그인설정</string>
-    <string name="login_save_id">아이디저장</string>
+    <string name="text_phone_num">전화번호</string>
+    <string name="text_confirm">확인</string>
+    <string name="text_id">아이디</string>
+    <string name="text_pwd">비밀번호</string>
+    <string name="text_sex">성별</string>
+    <string name="text_mail">남자</string>
+    <string name="text_femail">여자</string>
+    <string name="text_birth">생년월일</string>
+    <string name="text_height">신장</string>
+    <string name="text_weight">체중</string>
+    <string name="text_goal_height">목표 체중</string>
+    <string name="text_centimiter">%,d$cm</string>
+
+
+    <string name="please_input_valid_value">올바른 값을 입력해 주세요.</string>
+    <string name="you_can_dot_after_number2">소수점 둘째자리 까지 입력 가능합니다.</string>
+
+    <string name="login_auto_login_setting">자동로그인 설정</string>
+    <string name="login_save_id">아이디 저장</string>
     <string name="login_en">Login</string>
     <string name="login_member_join">회원가입</string>
     <string name="login_id_hint">ID(E-mail)</string>
     <string name="login_password_hint">password</string>
-    <string name="login_foget_account">아이디 or 비밀번호가 기억나지 않으세요?</string>
+    <string name="login_foget_account">가 기억나지 않으세요?</string>
 
 
     <string name="join_step1_title">가입 정보 입력(1/3)</string>
+    <string name="join_step2_title">가입 정보 입력(2/3)</string>
+    <string name="join_step3_title">가입 정보 입력(3/3)</string>
     <string name="join_step1_id_hint">ID (이메일 주소 입력)</string>
     <string name="join_step1_id_error">올바른 이메일 주소를 입력하세요.</string>
     <string name="join_step1_pwd_hint1">암호 입력</string>
@@ -30,7 +52,41 @@
     <string name="join_step1_contract2">개인정보취급방침</string>
     <string name="join_step1_contract_error">약관에 동의하셔야 합니다.</string>
 
+    <string name="input_email">이메일 주소 입력</string>
+    <string name="find_password">비밀번호 찾기</string>
+    <string name="find_password_desc">가입 시 등록하신 이메일 아이디와\n휴대폰 번호를 입력해주세요.\n등록된 이메일로 임시 비밀번호를 발송해 드립니다.</string>
+    <string name="find_password_desc2">발송이 되지 않을 경우 녹십자헬스케어\n고객지원센터로 문의 주시기 바랍니다</string>
+
+    <string name="find_id_phone_num_desc">가입 시 등록하신 휴대폰 번호를 입력해주세요.</string>
+    <string name="find_id_result">검색 결과</string>
+
+    <string name="find_id_dont_regist">가입된 정보가 없습니다.</string>
+    <string name="find_id_dont_notice">검색이 되지 않을 경우 녹십자헬스케어 고객지원센터로 문의 주시기 바랍니다.</string>
+
+    <string name="green_cross_phone_num">1588-2711 (평일 9:00 ~ 18:00)</string>
+    <string name="active_val_select">활동량 선택</string>
+
+    <string name="join_step3_have_disease">보유 질환</string>
+    <string name="join_step3_active_type1">주로 앉아 있음</string>
+    <string name="join_step3_active_type1_desc">하루 중 대부분을 앉아서 보내며 운동량이 거의 없음</string>
+    <string name="join_step3_active_type2">약간 활동적</string>
+    <string name="join_step3_active_type2_desc">하루 중 상당 부분 서서 보내거나 (교사, 판매원) 가벼운 운동을 꾸준히 하는 편</string>
+    <string name="join_step3_active_type3">활동적</string>
+    <string name="join_step3_active_type3_desc">하루 중 상당 부분을 신체 활동을 하면서 보내거나(트레이너, 우체부) 강도 높은 운동을 꾸준히 함</string>
 
 
 
+
+
+
+
+    <string name="join_step3_can_multi_select">(중복 선택 가능)</string>
+    <string name="join_step3_high_blood">고혈압</string>
+    <string name="join_step3_no1_diabetes">1형 당뇨</string>
+    <string name="join_step3_hyperlipidemia_type">고지혈증</string>
+    <string name="join_step3_no2_diabetes">2형 당뇨</string>
+
+    <string name="join_step3_do_you_smoke">흡연 하십니까?</string>
+    <string name="join_step3_question">선택하신 질환과 관련하여\n복약 중이신 약이 있습니까?</string>
+    <string name="join_step3_complete">가입 완료</string>
 </resources>

@@ -32,7 +32,7 @@ public class LoginFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_login_layout, container, false);
+        View view = inflater.inflate(R.layout.login_fragment, container, false);
         initView(view);
         return view;
     }
@@ -45,6 +45,8 @@ public class LoginFragment extends Fragment {
         EditText pwdEditText = (EditText) view.findViewById(R.id.login_pwd_edittext);
         EditText loginIdEditText = (EditText) view.findViewById(R.id.login_id_edittext);
 
+        view.findViewById(R.id.login_find_id_textview).setOnClickListener(mOnClickListener);
+        view.findViewById(R.id.login_find_pwd_textview).setOnClickListener(mOnClickListener);
         view.findViewById(R.id.login_join_button).setOnClickListener(mOnClickListener);
     }
 
@@ -52,9 +54,15 @@ public class LoginFragment extends Fragment {
         @Override
         public void onClick(View v) {
             int vId = v.getId();
-            if (R.id.login_join_button == vId) {
+            if (R.id.login_find_id_textview == vId) {
                 if (mIContent != null)
-                    mIContent.setFragment(JoinStep1Fragment.newInstance());
+                    mIContent.setFragment(FindIdFragment.newInstance(mIContent));
+            } else if (R.id.login_find_pwd_textview == vId) {
+                if (mIContent != null)
+                    mIContent.setFragment(FindPwdFragment.newInstance(mIContent));
+            } else if (R.id.login_join_button == vId) {
+                if (mIContent != null)
+                    mIContent.setFragment(JoinStep1Fragment.newInstance(mIContent));
             }
         }
     };
