@@ -2,6 +2,7 @@ package com.greencross.fitness.login;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
@@ -22,7 +23,11 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login_layout);
-        init();
+//        init();
+
+        if (savedInstanceState == null) {
+            initLoginFragment();
+        }
     }
 
 
@@ -65,47 +70,65 @@ public class LoginActivity extends AppCompatActivity {
         }
     };
 
-    private void init() {
-        Fragment loginFragment = LoginFragment.newInstance(new IContent() {
-            @Override
-            public void setFragment(Fragment fragment) {
-                replaceFragment(fragment);
-            }
-        });
-
-        replaceFragment(loginFragment);
-    }
+//    private void init() {
+//        Fragment loginFragment = LoginFragment.newInstance(new IContent() {
+//            @Override
+//            public void setFragment(Fragment fragment) {
+//                replaceFragment(fragment);
+//            }
+//        });
+//
+////        replaceFragment(loginFragment);
+//
+//        if (savedInstanceState == null) {
+//            getSupportFragmentManager().beginTransaction().add(R.id.content_layout, new LoginFragment()).commit();
+//        }
+//    }
 
     interface IContent {
         void setFragment(Fragment fragment);
     }
 
-//    private void setFragment(Fragment fragment) {
-//        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-//
-////        fragmentTransaction.replace(R.id.content_layout, fragment);
-//        fragmentTransaction.add(R.id.content_layout, fragment);
-////        fragmentTransaction.setCustomAnimations(android.R.anim.slide_in_left, android.R.anim.slide_out_right);
-//        fragmentTransaction.addToBackStack(null);
-//        fragmentTransaction.commit();
-//
-////        getSupportFragmentManager()
-////                .beginTransaction()
-////                .replace(R.id.content_layout, fragment).commit();
-//    }
+    private void removeAllFragment() {
+//        LinearLayout layout = (LinearLayout) findViewById(R.id.content_layout);
+//        layout.removeAllViewsInLayout();
 
+        FragmentManager fm = getSupportFragmentManager();
+        for(int i = 0; i < fm.getBackStackEntryCount(); ++i) {
+            Logger.i(TAG, "remove.name="+fm.toString());
+            fm.popBackStack();
+        }
+    }
+
+    private void initLoginFragment() {
+        getSupportFragmentManager().beginTransaction().add(R.id.content_layout, LoginFragment.newInstance(new IContent() {
+            @Override
+            public void setFragment(Fragment fragment) {
+                replaceFragment(fragment);
+            }
+        })).commit();
+    }
 
     private void replaceFragment(Fragment fragment) {
-        Bundle args = new Bundle();
+
+        if (fragment instanceof LoginFragment) {
+            removeAllFragment();
+            initLoginFragment();
+
+        } else {
+            Bundle args = new Bundle();
 //                args.putInt(ArticleFragment.ARG_POSITION, position);
-        fragment.setArguments(args);
-        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+            fragment.setArguments(args);
+            FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
 
-        transaction.replace(R.id.content_layout, fragment, fragment.getClass().getSimpleName());
-        transaction.addToBackStack(null);
+            transaction.replace(R.id.content_layout, fragment, fragment.getClass().getSimpleName());
+            transaction.addToBackStack(null);
 
-        transaction.commit();
-        printFragmentLog();
+            transaction.commit();
+            printFragmentLog();
+        }
+
+
     }
 
     private void printFragmentLog() {
