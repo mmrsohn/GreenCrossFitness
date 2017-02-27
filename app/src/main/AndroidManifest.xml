@@ -34,7 +34,7 @@
         </activity>
 
         <activity
-            android:name=".login.LoginActivity"
+            android:name=".login.BaseActivity"
             android:screenOrientation="portrait" >
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />

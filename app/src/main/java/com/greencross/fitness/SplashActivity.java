@@ -6,7 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 
-import com.greencross.fitness.login.LoginActivity;
+import com.greencross.fitness.login.BaseActivity;
 import com.greencross.fitness.util.CDialogUtil;
 import com.greencross.fitness.util.Logger;
 import com.greencross.fitness.util.NetworkUtil;
@@ -80,7 +80,7 @@ public class SplashActivity extends Activity {
 	
 	private void startMainActivity() {
 //		startActivity(new Intent(getApplication(), MainActivity.class)); // 로딩이 끝난후 이동할 Activity
-		startActivity(new Intent(getApplication(), LoginActivity.class)); // 로딩이 끝난후 이동할 Activity
+		startActivity(new Intent(getApplication(), BaseActivity.class)); // 로딩이 끝난후 이동할 Activity
 		SplashActivity.this.finish(); // 로딩페이지 Activity Stack에서 제거
 	}
 }

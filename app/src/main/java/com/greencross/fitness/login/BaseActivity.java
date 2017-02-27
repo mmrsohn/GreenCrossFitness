@@ -16,7 +16,7 @@ import android.widget.TextView;
 import com.greencross.fitness.R;
 import com.greencross.fitness.util.Logger;
 
-public class LoginActivity extends AppCompatActivity {
+public class BaseActivity extends AppCompatActivity {
     private final String TAG = LoginFragment.class.getSimpleName();
 
     @Override

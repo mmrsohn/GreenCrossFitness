@@ -15,10 +15,10 @@ import com.greencross.fitness.R;
 
 public class JoinStep2Fragment extends Fragment {
 
-    private static LoginActivity.IContent mIContent;
+    private static BaseActivity.IContent mIContent;
 
 
-    public static Fragment newInstance(LoginActivity.IContent iContent) {
+    public static Fragment newInstance(BaseActivity.IContent iContent) {
 //    public static Fragment newInstance() {
         JoinStep2Fragment fragment = new JoinStep2Fragment();
         mIContent = iContent;

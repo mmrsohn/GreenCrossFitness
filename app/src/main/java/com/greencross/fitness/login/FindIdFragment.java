@@ -16,10 +16,10 @@ import com.greencross.fitness.R;
 
 public class FindIdFragment extends Fragment {
 
-    private static LoginActivity.IContent mIContent;
+    private static BaseActivity.IContent mIContent;
 
 
-    public static Fragment newInstance(LoginActivity.IContent iContent) {
+    public static Fragment newInstance(BaseActivity.IContent iContent) {
         FindIdFragment fragment = new FindIdFragment();
         mIContent = iContent;
 
